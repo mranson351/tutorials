@@ -20,8 +20,8 @@ class TestModel(models.Model):
     bedrooms = fields.Integer(string='Bedrooms', default=2)
     living_area = fields.Integer(string='Living Area')
     facades = fields.Integer(string='Facades')
-    garage = fields.Boolean(string='Garages')
-    garden = fields.Boolean(string='Gardens')
+    garage = fields.Boolean(string='Garage')
+    garden = fields.Boolean(string='Garden')
     garden_area = fields.Integer(string='Garden Area')
     garden_orientation = fields.Selection(
         string='Orientation',
