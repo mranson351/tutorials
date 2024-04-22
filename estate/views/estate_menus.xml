@@ -1,7 +1,10 @@
 <odoo>
     <data>
         <menuitem id="real_estate" name="Real Estate" />
-        <menuitem id="advertisements" name="Advertisements" parent="real_estate" sequence="1"/>
-        <menuitem id="properties" action="estate_property_action" parent="advertisements" sequence="2"/>
+        <menuitem id="advertisements" name="Advertisements" parent="real_estate"/>
+        <menuitem id="properties" action="estate_property_action" parent="advertisements"/>
+        <menuitem id="settings" name="Settings" parent="real_estate"/>
+        <menuitem id="types" action="property_type_action" parent="settings"/>
+        <menuitem id="tag" action="property_tag_action" parent="settings"/>
     </data>
 </odoo>
