@@ -3,19 +3,22 @@
         <field name="name">Real Estate</field>
         <field name="res_model">estate.property</field>
         <field name="view_mode">tree,form,search</field>
+        <field name="context">{'search_default_available': True}</field>
     </record>
     <record id="estate_property_view_tree" model="ir.ui.view">
         <field name="name">estate.property.tree</field>
         <field name="model">estate.property</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree decoration-success="state in ['received','accepted']" decoration-bf="state == 'accepted'" decoration-muted="state == 'sold'">
                 <field name="name" string="Titles"/>
                 <field name="postcode" string="Postcode"/>
+                <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
                 <field name="bedrooms" string="Bedrooms"/>
                 <field name="living_area" string="Living Area (sqm)"/>
                 <field name="expected_price" string="Expected Price"/>
                 <field name="selling_price" string="Selling Price"/>
-                <field name="date_availability" string="Available From"/>
+                <field name="state" string="Selling Price" column_invisible="True"/>
+                <field name="date_availability" string="Available From" optional="True"/>
             </tree>
         </field>
     </record>
@@ -24,38 +27,44 @@
         <field name="model">estate.property</field>
         <field name="arch" type="xml">
             <form string="New Property">
+                <header>
+                    <button name="set_sold" type="object" string="Sold" invisible="state != 'accepted'"/>
+                    <button name="set_canceled" type="object" string="Cancel" invisible="state == 'sold'"/>
+                    <field name="state" string="State" widget="statusbar" statusbar_visible="new,received,accepted,sold" options="{'clickable':True}" />
+                </header>
                 <sheet>
                     <h1>
                         <field name="name"/>
                     </h1>
                     <group>
                         <group>
-                            <field name="tag_ids" widget="many2many_tags"/>
-                            <field name="type_id" string="Property Type"/>
+                            <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                            <field name="type_id" string="Property Type" options="{'no_create': true}"/>
                             <field name="postcode" string="Postcode"/>
                             <field name="date_availability" string="Available From"/>
                         </group>
                         <group>
                             <field name="expected_price" string="Expected Price"/>
+                            <field name="best_offer" string="Best Offer" />
                             <field name="selling_price" string="Selling Price"/>
                         </group>
                         <notebook>
                             <page string="Description">
                                 <group>
-                                    <field name="description"/>
+                                    <field name="description" string="Description"/>
                                     <field name="bedrooms" string="Bedrooms"/>
                                     <field name="living_area" string="Living Area (sqm)"/>
                                     <field name="facades" string="Facades"/>
                                     <field name="garage" string="Garage"/>
                                     <field name="garden" string="Garden"/>
-                                    <field name="garden_area" string="Garden Area (sqm)"/>
-                                    <field name="garden_orientation" string="Garden orientation"/>
-                                    <field name="state" string="State"/>
+                                    <field name="garden_area" string="Garden Area" invisible="not garden"/>
+                                    <field name="garden_orientation" string="Orientation" invisible="not garden"/>
+                                    <field name="total_area" string="Total Area"/>
                                 </group>
                             </page>
                             <page string="Offers">
                                 <group>
-                                    <field name="offer_ids" string="Offers"/>
+                                    <field name="offer_ids" string="" readonly="state in ['accepted','sold','canceled']"/>
                                 </group>
                             </page>
                             <page string="Other informations">
@@ -73,16 +82,17 @@
     <record id="estate_property_view_search" model="ir.ui.view">
         <field name="name">estate.property.search</field>
         <field name="model">estate.property</field>
+        <field name="priority">32</field>
         <field name="arch" type="xml">
             <search string="Properties">
+                <filter name="available" string="Available" domain="['|', ('state', '=', 'new'), ('state', '=', 'received')]"/>
+                <filter name="postcode" string="Postcode" context="{'group_by': 'postcode'}"/>
                 <field name="name" string="Title"/>
                 <field name="postcode" string="Postcode"/>
                 <field name="expected_price" string="Expected Price"/>
                 <field name="bedrooms" string="Bedrooms"/>
-                <field name="living_area" string="Living Area (sqm)"/>
+                <field name="living_area" string="Living Area (sqm)" filter_domain="[('living_area', '>=', self)]"/>
                 <field name="facades" string="Facades"/>
-                <filter name="available" string="Available" domain="['|', ('state', '=', 'new'), ('state', '=', 'received')]"/>
-                <filter name="postcode" string="Postcode" context="{'group_by': 'postcode'}"/>
             </search>
         </field>
     </record>

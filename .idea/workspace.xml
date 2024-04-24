@@ -5,23 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8794d61c-0143-45de-8684-1bbe87e217b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/estate/models/property_offer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/estate/models/property_tag.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/estate/models/property_type.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/estate/views/property_offer_views.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/estate/views/property_tag_views.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/estate/views/property_type_views.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/e4726cd2-fcfb-40e4-b6c6-5815a2ce0968.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e4726cd2-fcfb-40e4-b6c6-5815a2ce0968.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/e4726cd2-fcfb-40e4-b6c6-5815a2ce0968/storage_v2/_src_/database/rd-demo.niDUOw/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e4726cd2-fcfb-40e4-b6c6-5815a2ce0968/storage_v2/_src_/database/rd-demo.niDUOw/schema/information_schema.FNRwLQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/e4726cd2-fcfb-40e4-b6c6-5815a2ce0968/storage_v2/_src_/database/rd-demo.niDUOw/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e4726cd2-fcfb-40e4-b6c6-5815a2ce0968/storage_v2/_src_/database/rd-demo.niDUOw/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/e4726cd2-fcfb-40e4-b6c6-5815a2ce0968/storage_v2/_src_/database/rd-demo.niDUOw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e4726cd2-fcfb-40e4-b6c6-5815a2ce0968/storage_v2/_src_/database/rd-demo.niDUOw/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estate/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/estate/__manifest__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estate/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/estate/models/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estate/models/estate_property.py" beforeDir="false" afterPath="$PROJECT_DIR$/estate/models/estate_property.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estate/security/ir.model.access.csv" beforeDir="false" afterPath="$PROJECT_DIR$/estate/security/ir.model.access.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estate/views/estate_menus.xml" beforeDir="false" afterPath="$PROJECT_DIR$/estate/views/estate_menus.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estate/models/property_offer.py" beforeDir="false" afterPath="$PROJECT_DIR$/estate/models/property_offer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estate/models/property_tag.py" beforeDir="false" afterPath="$PROJECT_DIR$/estate/models/property_tag.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estate/models/property_type.py" beforeDir="false" afterPath="$PROJECT_DIR$/estate/models/property_type.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estate/views/estate_property_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/estate/views/estate_property_views.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estate/views/property_offer_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/estate/views/property_offer_views.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estate/views/property_type_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/estate/views/property_type_views.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +75,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;Shell Script.Checkout.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;17.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/media/tisler/32917439-8102-4204-b4ea-3d3f58ffce79/Travail/drafts/tutorials&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/media/tisler/32917439-8102-4204-b4ea-3d3f58ffce79/Travail&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -92,6 +87,9 @@
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
       &quot;postgresql&quot;
+    ],
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;PLAIN_TEXT&quot;
     ]
   }
 }</component>
@@ -168,7 +166,11 @@
       <workItem from="1713460800456" duration="8064000" />
       <workItem from="1713470331901" duration="4808000" />
       <workItem from="1713531759603" duration="19257000" />
-      <workItem from="1713791327841" duration="10759000" />
+      <workItem from="1713791327841" duration="21945000" />
+      <workItem from="1713880273769" duration="3418000" />
+      <workItem from="1713885701593" duration="5950000" />
+      <workItem from="1713892736900" duration="13738000" />
+      <workItem from="1713963504003" duration="20465000" />
     </task>
     <servers />
   </component>
@@ -208,7 +210,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="MenuItem OK" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/tutorials$Tutorials.coverage" NAME="Tutorials Coverage Results" MODIFIED="1713802250969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../odoo-16" />
+    <SUITE FILE_PATH="coverage/tutorials$Tutorials.coverage" NAME="Tutorials Coverage Results" MODIFIED="1713986684549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../odoo-16" />
     <SUITE FILE_PATH="coverage/tutorials$odoo_bin.coverage" NAME="odoo-bin Coverage Results" MODIFIED="1713382948067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../odoo-16" />
   </component>
 </project>
