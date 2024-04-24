@@ -1,7 +1,7 @@
-import datetime
-
 # noinspection PyUnresolvedReferences
 from odoo import models, fields
+# noinspection PyUnresolvedReferences
+from odoo.exceptions import UserError
 from odoo.odoo import api
 
 
@@ -25,7 +25,18 @@ class PropertyOffer(models.Model):
     date_deadline = fields.Date(string='Deadline', compute='_compute_date_deadline', inverse='_inverse_date_deadline')
     partner_id = fields.Many2one('res.partner', string='Buyer', required=True)
     property_id = fields.Many2one('estate.property', string='Property', required=True)
-    type_id = fields.Many2one(related="property_id.type_id", string='Property Type', readonly=True, stored="True")
+    type_id = fields.Many2one(related="property_id.type_id", string='Property Type', readonly=True)
+
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            self.env['estate.property'].browse(vals['property_id']).state = 'received'
+            if vals['price'] < 0.9 * self.env['estate.property'].browse(vals['property_id']).expected_price:
+                raise UserError("You are expected to make an offer greater than 90% of the expected price")
+            for offer_id in self.env['estate.property'].browse(vals['property_id']).offer_ids:
+                if offer_id.price >= vals['price']:
+                    raise UserError("You are expected to make a higher offer than those already entered")
+            return super(PropertyOffer, self).create(vals)
 
     @api.depends('create_date', 'validity')
     def _compute_date_deadline(self):
@@ -60,4 +71,5 @@ class PropertyOffer(models.Model):
             record.status = None
             record.property_id.selling_price = None
             record.property_id.buyer_id = None
+            record.property_id.state = 'received'
         return True

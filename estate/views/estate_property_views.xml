@@ -9,7 +9,7 @@
         <field name="name">estate.property.tree</field>
         <field name="model">estate.property</field>
         <field name="arch" type="xml">
-            <tree decoration-success="state in ['received','accepted']" decoration-bf="state == 'accepted'" decoration-muted="state == 'sold'">
+            <tree decoration-success="state in ['received','accepted']" decoration-bf="state == 'accepted'" decoration-muted="state in ['sold', 'canceled']">
                 <field name="name" string="Titles"/>
                 <field name="postcode" string="Postcode"/>
                 <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
@@ -29,8 +29,8 @@
             <form string="New Property">
                 <header>
                     <button name="set_sold" type="object" string="Sold" invisible="state != 'accepted'"/>
-                    <button name="set_canceled" type="object" string="Cancel" invisible="state == 'sold'"/>
-                    <field name="state" string="State" widget="statusbar" statusbar_visible="new,received,accepted,sold" options="{'clickable':True}" />
+                    <button name="set_canceled" type="object" string="Cancel" invisible="state in ['sold', 'canceled']"/>
+                    <field name="state" string="State" widget="statusbar" statusbar_visible="new,received,accepted,sold" />
                 </header>
                 <sheet>
                     <h1>

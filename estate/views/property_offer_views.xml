@@ -14,17 +14,19 @@
                 <field name="partner_id" string="Partner"/>
                 <field name="validity" string="Validity"/>
                 <field name="date_deadline" string="Deadline"/>
-                <button name="set_status_offer_accepted"
+                <button title="Offer accepted"
+                        name="set_status_offer_accepted"
                         type="object"
                         icon="fa-check"
                         invisible="status in ['accepted','refused']"
                 />
-                <button
+                <button title="Offer refused"
                         name="set_status_offer_refused"
-                        type="object" icon="fa-close"
+                        type="object"
+                        icon="fa-close"
                         invisible="status in ['accepted','refused']"
                 />
-                <button
+                <button title="Cancel offer state"
                         name="set_status_offer_canceled"
                         type="object" icon="fa-ban"
                         invisible="status not in ['accepted','refused']"
@@ -41,7 +43,6 @@
                 <sheet>
                     <group>
                         <field name="price" string="Price"/>
-                        <field name="status" string="Status"/>
                         <field name="validity" string="Validity (days)"/>
                         <field name="date_deadline" string="Deadline"/>
                         <field name="partner_id" string="Buyer"/>

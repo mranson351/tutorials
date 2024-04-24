@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8794d61c-0143-45de-8684-1bbe87e217b1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e4726cd2-fcfb-40e4-b6c6-5815a2ce0968.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e4726cd2-fcfb-40e4-b6c6-5815a2ce0968.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e4726cd2-fcfb-40e4-b6c6-5815a2ce0968/storage_v2/_src_/database/rd-demo.niDUOw/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e4726cd2-fcfb-40e4-b6c6-5815a2ce0968/storage_v2/_src_/database/rd-demo.niDUOw/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e4726cd2-fcfb-40e4-b6c6-5815a2ce0968/storage_v2/_src_/database/rd-demo.niDUOw/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e4726cd2-fcfb-40e4-b6c6-5815a2ce0968/storage_v2/_src_/database/rd-demo.niDUOw/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e4726cd2-fcfb-40e4-b6c6-5815a2ce0968/storage_v2/_src_/database/rd-demo.niDUOw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e4726cd2-fcfb-40e4-b6c6-5815a2ce0968/storage_v2/_src_/database/rd-demo.niDUOw/schema/public.abK9xQ.meta" afterDir="false" />
+    <list default="true" id="8794d61c-0143-45de-8684-1bbe87e217b1" name="Changes" comment="Chapter 11">
+      <change afterPath="$PROJECT_DIR$/estate/views/res_users_views.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estate/models/estate_property.py" beforeDir="false" afterPath="$PROJECT_DIR$/estate/models/estate_property.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estate/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/estate/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estate/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/estate/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estate/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/estate/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estate/models/inherited_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/estate/models/res_users.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estate/models/property_offer.py" beforeDir="false" afterPath="$PROJECT_DIR$/estate/models/property_offer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estate/models/property_tag.py" beforeDir="false" afterPath="$PROJECT_DIR$/estate/models/property_tag.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estate/models/property_type.py" beforeDir="false" afterPath="$PROJECT_DIR$/estate/models/property_type.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estate/views/estate_property_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/estate/views/estate_property_views.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estate/views/property_offer_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/estate/views/property_offer_views.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estate/views/property_type_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/estate/views/property_type_views.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +166,8 @@
       <workItem from="1713880273769" duration="3418000" />
       <workItem from="1713885701593" duration="5950000" />
       <workItem from="1713892736900" duration="13738000" />
-      <workItem from="1713963504003" duration="20465000" />
+      <workItem from="1713963504003" duration="26373000" />
+      <workItem from="1714055164519" duration="5820000" />
     </task>
     <servers />
   </component>
@@ -207,10 +204,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="MenuItem OK" />
-    <option name="LAST_COMMIT_MESSAGE" value="MenuItem OK" />
+    <MESSAGE value="Chapter 11" />
+    <MESSAGE value="Chapter 11" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chapter 11" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/tutorials$Tutorials.coverage" NAME="Tutorials Coverage Results" MODIFIED="1713986684549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../odoo-16" />
+    <SUITE FILE_PATH="coverage/tutorials$Tutorials.coverage" NAME="Tutorials Coverage Results" MODIFIED="1714060964392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../odoo-16" />
     <SUITE FILE_PATH="coverage/tutorials$odoo_bin.coverage" NAME="odoo-bin Coverage Results" MODIFIED="1713382948067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../odoo-16" />
   </component>
 </project>

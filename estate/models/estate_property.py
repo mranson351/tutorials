@@ -71,10 +71,22 @@ class EstateProperty(models.Model):
          'The garden area should be strictly positive')
     ]
 
+    @api.ondelete(at_uninstall=False)
+    def _unlink_if_state_is_not_new_or_canceled(self):
+        for record in self:
+            if record.state == 'received':
+                raise UserError("Can't delete a property with a received offer")
+            elif record.state == 'accepted':
+                raise UserError("Can't delete a property with an accepted offer")
+            elif record.state == 'sold':
+                raise UserError("Can't delete a sold property")
+
     @api.constrains('expected_price')
     def _check_expected_price(self):
         for record in self:
-            if bool(record.selling_price) & (record.selling_price != 0) & (record.selling_price < 0.9 * record.expected_price):
+            if (bool(record.selling_price) &
+                    (record.selling_price != 0) &
+                    (record.selling_price < 0.9 * record.expected_price)):
                 raise ValidationError('Selling price shouldn\'t be below 90 % of expected price')
 
     @api.depends('living_area', 'garden_area')
