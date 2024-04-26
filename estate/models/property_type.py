@@ -1,8 +1,4 @@
-# noinspection PyUnresolvedReferences
-from odoo import models, fields
-# noinspection PyUnresolvedReferences
-from odoo.exceptions import ValidationError
-from odoo.odoo import api
+from odoo import models, fields, api
 
 
 class PropertyType(models.Model):

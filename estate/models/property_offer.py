@@ -1,8 +1,5 @@
-# noinspection PyUnresolvedReferences
-from odoo import models, fields
-# noinspection PyUnresolvedReferences
+from odoo import models, fields, api
 from odoo.exceptions import UserError
-from odoo.odoo import api
 
 
 class PropertyOffer(models.Model):

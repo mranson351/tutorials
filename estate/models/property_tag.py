@@ -1,4 +1,3 @@
-# noinspection PyUnresolvedReferences
 from odoo import models, fields
 
 
