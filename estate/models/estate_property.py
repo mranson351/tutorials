@@ -18,14 +18,18 @@ class EstateProperty(models.Model):
     )
     expected_price = fields.Float(string="Expected Price", required=True)
     selling_price = fields.Float(string="Selling Price", readonly=True, copy=False)
-    best_offer = fields.Float(string="Best Offer", readonly=True, compute="_compute_best_offer")
+    best_offer = fields.Float(
+        string="Best Offer", readonly=True, compute="_compute_best_offer"
+    )
     bedrooms = fields.Integer(string="Bedrooms", default=2)
     living_area = fields.Integer(string="Living Area")
     facades = fields.Integer(string="Facades")
     garage = fields.Boolean(string="Garage")
     garden = fields.Boolean(string="Garden")
     garden_area = fields.Integer(string="Garden Area", default=False)
-    total_area = fields.Integer(string="Total Area", readonly=True, compute="_compute_total_area")
+    total_area = fields.Integer(
+        string="Total Area", readonly=True, compute="_compute_total_area"
+    )
     garden_orientation = fields.Selection(
         string="Orientation",
         selection=[
@@ -51,7 +55,9 @@ class EstateProperty(models.Model):
         default="new",
     )
     type_id = fields.Many2one("estate.property.type", string="Type")
-    salesperson_id = fields.Many2one("res.users", string="Sales Person", default=lambda self: self.env.user)
+    salesperson_id = fields.Many2one(
+        "res.users", string="Sales Person", default=lambda self: self.env.user
+    )
     buyer_id = fields.Many2one("res.partner", string="Buyer", copy=False)
     tag_ids = fields.Many2many("estate.property.tag", string="Tags")
     offer_ids = fields.One2many("estate.property.offer", "property_id", string="Offers")
@@ -101,7 +107,9 @@ class EstateProperty(models.Model):
                 & (record.selling_price != 0)
                 & (record.selling_price < 0.9 * record.expected_price)
             ):
-                raise ValidationError("Selling price shouldn't be below 90 % of expected price")
+                raise ValidationError(
+                    "Selling price shouldn't be below 90 % of expected price"
+                )
 
     @api.depends("living_area", "garden_area")
     def _compute_total_area(self):
